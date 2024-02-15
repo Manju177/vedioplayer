@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f6f9fc, #dde8f3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* img.move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+} */
+
+@media screen and (max-width: 600px) {
+  .smallScreen{
+    display: flex;
+  }
+  .move{
+    width: fit-content;
+  }
+  
+}
