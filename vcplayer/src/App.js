@@ -29,7 +29,13 @@ const App = () => {
     <div className="container mx-auto my-8">
       <div className="grid grid-cols-3 gap-8">
         <div className="col-span-2 smallScreen">
-          {currentVideo ? <VideoPlayer video={currentVideo} /> :<img className='sm:w-full move' src={img} alt='_blank'/>}
+          {currentVideo ? <VideoPlayer video={currentVideo} /> :
+          <div>
+          <img className='sm:w-full move' src={img} alt='_blank'/>
+          <span className='text-lg font-bold mb-4'>
+          <marquee behavior="scroll" direction="left" scrollamount="12">Select the video you want to play from the playlist </marquee>
+          </span>
+          </div>}
         </div>
         <div>
           <Playlist videos={videos} handleVideoClick={handleVideoClick} />

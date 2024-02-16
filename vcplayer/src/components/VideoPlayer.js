@@ -1,4 +1,3 @@
-// src/components/VideoPlayer.js
 import React, { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faBackward, faForward } from '@fortawesome/free-solid-svg-icons';
@@ -47,8 +46,8 @@ const VideoPlayer = ({ video }) => {
           playbackRate={speed}
         ></video>
       </div>
-      {!autoplay && (
-        <div className="flex items-center mb-4">
+      {(
+        <div className="flex items-center mb-4 ">
           <button onClick={handlePlay} className="mr-2 bg-transparent hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
             <FontAwesomeIcon icon={faPlay} className="text-lg" />
           </button>
@@ -63,7 +62,7 @@ const VideoPlayer = ({ video }) => {
           </button>
         </div>
       )}
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 gap-2">
         <label className="mr-4 font-semibold">Speed:</label>
         <div className="relative">
           <select value={speed} onChange={handleSpeedChange} className="appearance-none bg-transparent border border-gray-300 rounded py-2 pl-3 pr-8 text-sm font-semibold">
@@ -82,14 +81,15 @@ const VideoPlayer = ({ video }) => {
             </svg>
           </div>
         </div>
-      </div>
-      <div className="flex items-center">
+        <div className="flex items-center">
         <label className="mr-4 font-semibold">Autoplay:</label>
         <div className="flex items-center">
           <input type="checkbox" checked={autoplay} onChange={handleAutoplayChange} className="mr-2 rounded border-gray-300 focus:ring-gray-400" />
           <span className="text-gray-600">Autoplay the video</span>
         </div>
       </div>
+      </div>
+
     </div>
   );
 };
