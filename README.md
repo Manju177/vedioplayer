@@ -4,5 +4,5 @@
 //localhost 3000
 
 
-//libraries used for styling Tailwind
+//libraries used for styling Tailwind CSS
 
