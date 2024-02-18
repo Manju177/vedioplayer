@@ -4,7 +4,7 @@
 //localhost 3000
 
 
-//libraries used for styling Tailwind CSS
+//libraries used for styling: Tailwind CSS
 
 //main folder structure:
      src->component
